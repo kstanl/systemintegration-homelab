@@ -1,32 +1,32 @@
 # System Integration Homelab
 
-This repository documents my practical learning journry toward becoming a Fachinformatiker für  Systemintegration.
+This repository documents my practical learning journey toward becoming a Fachinformatiker für Systemintegration.
 
-The goal of this homelab is to build, configure, troubleshoot, and document a real It infrastructure using Linux, Virtualisation, networking, Windows Server, and system administration technologies
+The goal of this homelab is to build, configure, troubleshoot, and document real IT infrastructure using Linux, virtualization, networking, Windows Server, and system administration technologies.
 
-# Objectives
+## Objectives
 
-- Build pratical Linux administration skills
+- Build practical Linux administration skills
 - Learn server installation and configuration
 - Practice network configuration and troubleshooting
-- Learn KVM/QEMU and libvirt virtualisation
-- Build a windows server environment
+- Learn KVM/QEMU and libvirt virtualization
+- Build a Windows Server environment
 - Practice Active Directory, DNS, DHCP, and Group Policy
-- learn file services and permissions
+- Learn file services and permissions
 - Develop structured troubleshooting skills
 - Document all work in a professional and reproducible way
 
-# Current Projects
+## Current Projects
 
-## 01 - Linux Server Administration
-Status: IN PROGRESS
+### 01 - Linux Server Administration
+Status: In progress
 
-Topics
-- Ubuntu Server Installation
-- Network Configuration
+Topics:
+- Ubuntu Server installation
+- Network configuration
 - SSH
 - User and group management
-- permissions
+- Permissions
 - systemd
 - Firewall
 - Logs
@@ -34,26 +34,24 @@ Topics
 
 ## Planned Projects
 
-- KVM/QEMu and libvirt
+- KVM/QEMU and libvirt
 - Windows Server
 - Active Directory
 - DNS and DHCP
 - Samba file services
 - Network troubleshooting
 - Bash scripting
-- Powershell basics
+- PowerShell basics
 
-## Learning Method 
+## Learning Method
 
-For each project i follow this workflow
+For each project I follow this workflow:
 
-- Learn the concept
-- Configure the system
-- Test the configuration
-- Break something intentionally
-- Troubleshoot the problem
-- Document the solution
-- Commit the changes to Git
-- Push the changes to GitHub
-
-
+1. Learn the concept
+2. Configure the system
+3. Test the configuration
+4. Break something intentionally
+5. Troubleshoot the problem
+6. Document the solution
+7. Commit the changes to Git
+8. Push the changes to GitHub
