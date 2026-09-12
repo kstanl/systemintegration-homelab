@@ -480,6 +480,12 @@ The test completed successfully with:
 
 This confirmed that the new hostname could be resolved locally.
 
+### Hostname Verification
+
+The final server identity and network configuration were verified after reconnecting through SSH.
+
+![Ubuntu Server hostname verification](screenshots/05-hostname-verification.png)
+
 ### Verifying a New SSH Session
 
 After changing the hostname, I disconnected from the existing SSH session and established a new connection.
