@@ -345,3 +345,176 @@ The next configuration tasks are:
 4. Decide whether to extend the root logical volume
 5. Inspect the current network configuration files
 6. Prepare for static IP configuration
+
+
+
+## 10. Server Hostname Configuration
+
+During the initial inspection, the libvirt domain and Ubuntu guest used different names.
+
+The libvirt domain had already been renamed to:
+
+```text
+srv-linux01
+```
+
+while the Ubuntu guest still used:
+
+```text
+kstan-server
+```
+
+The goal was to use a consistent naming convention across the virtualization and operating system layers.
+
+### Initial State
+
+The guest configuration was verified using:
+
+```bash
+hostname
+cat /etc/hostname
+cat /etc/hosts
+hostnamectl
+```
+
+The system reported:
+
+```text
+Static hostname: kstan-server
+```
+
+and `/etc/hosts` contained:
+
+```text
+127.0.1.1 kstan-server
+```
+
+### Changing the Hostname
+
+I initially attempted:
+
+```bash
+sudo systemctl set-hostname srv-linux01
+```
+
+This failed because `set-hostname` is not a `systemctl` command.
+
+The correct utility for managing the system hostname is `hostnamectl`.
+
+The hostname was changed using:
+
+```bash
+sudo hostnamectl set-hostname srv-linux01
+```
+
+The change was verified with:
+
+```bash
+hostname
+hostnamectl
+```
+
+The system then reported:
+
+```text
+Static hostname: srv-linux01
+```
+
+### Updating Local Hostname Resolution
+
+The `/etc/hosts` entry was updated from:
+
+```text
+127.0.1.1 kstan-server
+```
+
+to:
+
+```text
+127.0.1.1 srv-linux01
+```
+
+The final configuration was verified using:
+
+```bash
+cat /etc/hostname
+cat /etc/hosts
+```
+
+The relevant configuration became:
+
+```text
+/etc/hostname:
+srv-linux01
+
+/etc/hosts:
+127.0.0.1 localhost
+127.0.1.1 srv-linux01
+```
+
+### Testing Name Resolution
+
+Local hostname resolution was tested using:
+
+```bash
+getent hosts srv-linux01
+```
+
+Result:
+
+```text
+127.0.1.1       srv-linux01
+```
+
+A local connectivity test was also performed:
+
+```bash
+ping -c 2 srv-linux01
+```
+
+The test completed successfully with:
+
+```text
+2 packets transmitted, 2 received, 0% packet loss
+```
+
+This confirmed that the new hostname could be resolved locally.
+
+### Verifying a New SSH Session
+
+After changing the hostname, I disconnected from the existing SSH session and established a new connection.
+
+The new shell prompt displayed:
+
+```text
+kstan@srv-linux01
+```
+
+This confirmed that the new hostname was active for newly created sessions.
+
+### Updating the SSH Client Alias
+
+The SSH client configuration on the host was also updated so that the server could be accessed using its new name.
+
+The connection was tested with:
+
+```bash
+ssh srv-linux01
+```
+
+The connection succeeded and opened a session on:
+
+```text
+kstan@srv-linux01
+```
+
+### Final Naming State
+
+| Layer | Name |
+|---|---|
+| Physical Linux host | `kstan` |
+| libvirt domain | `srv-linux01` |
+| Ubuntu guest hostname | `srv-linux01` |
+| SSH client alias | `srv-linux01` |
+
+The server now uses a consistent naming convention across the virtualization, guest operating system, and SSH administration layers.
