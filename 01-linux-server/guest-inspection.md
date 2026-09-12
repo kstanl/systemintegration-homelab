@@ -218,6 +218,32 @@ with approximately:
 
 This confirmed that the 50 GiB virtual disk is not fully allocated to the root filesystem.
 
+### LVM Capacity Verification
+
+To determine how the 48 GiB LVM partition was being used, I inspected the physical volume, volume group, and logical volume.
+
+```bash
+sudo pvs
+sudo vgs
+sudo lvs
+```
+
+The results showed:
+
+| LVM Component | Size | Free |
+|---|---:|---:|
+| Physical volume `/dev/vda3` | ~48 GiB | 24 GiB |
+| Volume group `ubuntu-vg` | ~48 GiB | 24 GiB |
+| Logical volume `ubuntu-lv` | ~24 GiB | - |
+
+The root logical volume currently uses approximately 24 GiB of the approximately 48 GiB available to the volume group.
+
+The remaining 24 GiB is free space inside `ubuntu-vg`.
+
+No storage changes were made during this inspection.
+
+The free capacity can later be used to practice LVM administration, such as creating additional logical volumes or extending an existing logical volume and filesystem.
+
 ---
 
 ## 6. SSH Service Inspection
