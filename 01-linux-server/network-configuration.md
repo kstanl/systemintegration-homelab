@@ -332,8 +332,6 @@ network:
   version: 2
 ```
 
-## Network Architecture
-
 The setting `dhcp4: true` configures `ens3` to obtain its IPv4 configuration through DHCP.
 
 The `match` section identifies the interface by its MAC address. The `set-name` setting assigns the interface name `ens3`.
