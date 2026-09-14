@@ -283,3 +283,48 @@ This matches the socket-activated SSH configuration observed on the server.
 The following screenshot shows the SSH service state, SSH socket state, and TCP port 22 verification.
 
 ![SSH socket activation](screenshots/08-ssh-socket-activation.png)
+
+
+
+## Troubleshooting a Failed systemd Service
+
+I created a test service named `homelab-test.service` to practice service troubleshooting.
+
+The service initially failed because its `ExecStart` command referenced a file that did not exist:
+
+```text
+/usr/local/bin/homelab-test
+```
+
+I inspected the failure with:
+
+```bash
+systemctl status homelab-test.service --no-pager
+journalctl -u homelab-test.service -n 20 --no-pager
+```
+
+The important error was:
+
+```text
+status=203/EXEC
+Unable to locate executable '/usr/local/bin/homelab-test'
+No such file or directory
+```
+
+![systemd troubleshooting failure](screenshots/09-systemd-troubleshooting-failure.png)
+
+I fixed the problem by creating the missing script and making it executable:
+
+```bash
+sudo chmod +x /usr/local/bin/homelab-test
+```
+
+After starting the service again, the journal showed:
+
+```text
+Homelab systemd test completed successfully
+Deactivated successfully.
+Finished homelab-test.service
+```
+
+Because the service uses `Type=oneshot`, the final state is `inactive (dead)` after successful execution.
