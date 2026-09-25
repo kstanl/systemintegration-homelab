@@ -13,6 +13,10 @@ The lab contains:
 - Active Directory users and security groups
 - NTFS and SMB file sharing
 - AGDLP-based permission management
+- Group Policy
+- Windows Server DHCP
+- Forward and reverse DNS
+
 
 Domain:
 
@@ -61,6 +65,34 @@ Covers:
 - client access testing
 - create, write, and delete verification
 
+
+### 4. Group Policy
+
+[Group Policy](group-policy.md)
+
+Covers:
+
+- workstation security policy
+- Windows Defender Firewall policy
+- user restrictions
+- OU-based GPO linking
+- client-side policy verification
+
+### 5. DHCP
+
+[Windows Server DHCP](dhcp.md)
+
+Covers:
+
+- static IPv4 configuration for DC01
+- DHCP Server installation and AD authorization
+- IPv4 scope configuration
+- DHCP options for gateway and DNS
+- Windows 11 client lease testing
+- APIPA and DHCP troubleshooting
+- libvirt bridge troubleshooting
+
+
 ## Current Architecture
 
 ```text
@@ -68,7 +100,7 @@ Covers:
 
                            DC01
                     192.168.122.20
-                  AD DS / DNS / SMB
+                  AD DS / DNS / DHCP / SMB
                          │
              ┌───────────┴───────────┐
              │                       │
