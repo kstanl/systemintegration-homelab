@@ -17,6 +17,7 @@ The lab contains:
 - Windows Server DHCP
 - Forward and reverse DNS
 - Windows Server storage management
+- Windows Server Backup and Restore
 
 
 Domain:
@@ -105,6 +106,19 @@ Covers:
 - NTFS volume configuration
 - PowerShell storage verification
 - basic storage troubleshooting
+
+### 7. Backup and Restore
+
+[Windows Server Backup and Restore](backup-and-restore.md)
+
+Covers:
+
+- Windows Server Backup installation
+- dedicated backup volume
+- file-level backup with `wbadmin`
+- simulated file deletion
+- GUI-based file recovery
+- PowerShell recovery verification
 
 
 ## Current Architecture
