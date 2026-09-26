@@ -16,6 +16,7 @@ The lab contains:
 - Group Policy
 - Windows Server DHCP
 - Forward and reverse DNS
+- Windows Server storage management
 
 
 Domain:
@@ -91,6 +92,19 @@ Covers:
 - Windows 11 client lease testing
 - APIPA and DHCP troubleshooting
 - libvirt bridge troubleshooting
+
+### 6. Storage
+
+[Windows Server Storage](storage.md)
+
+Covers:
+
+- QCOW2 virtual data disk
+- VirtIO disk attachment
+- GPT partitioning
+- NTFS volume configuration
+- PowerShell storage verification
+- basic storage troubleshooting
 
 
 ## Current Architecture
