@@ -18,6 +18,7 @@ The lab contains:
 - Forward and reverse DNS
 - Windows Server storage management
 - Windows Server Backup and Restore
+- Windows Server monitoring and Event Viewer
 
 
 Domain:
@@ -119,6 +120,18 @@ Covers:
 - simulated file deletion
 - GUI-based file recovery
 - PowerShell recovery verification
+
+### 8. Monitoring and Event Viewer
+
+[Windows Server Monitoring and Event Viewer](monitoring-and-event-viewer.md)
+
+Covers:
+
+- Windows service monitoring
+- Event Viewer System logs
+- event filtering and Event IDs
+- PowerShell event queries
+- controlled service stop and recovery
 
 
 ## Current Architecture
