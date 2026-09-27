@@ -20,6 +20,7 @@ The lab contains:
 - Windows Server Backup and Restore
 - Windows Server monitoring and Event Viewer
 - Windows Server remote administration with PowerShell Remoting
+- Windows Server maintenance and health verification
 
 
 Domain:
@@ -146,6 +147,17 @@ Covers:
 - PowerShell Remoting
 - remote service monitoring
 - authentication and authorization troubleshooting
+
+### 10. Server Maintenance and Health Check
+
+[Windows Server Maintenance and Health Check](server-maintenance.md)
+
+Covers:
+
+- Windows Update and patch management
+- post-update service verification
+- DNS health testing with `dcdiag`
+- domain controller health diagnostics
 
 ## Current Architecture
 
