@@ -19,6 +19,7 @@ The lab contains:
 - Windows Server storage management
 - Windows Server Backup and Restore
 - Windows Server monitoring and Event Viewer
+- Windows Server remote administration with PowerShell Remoting
 
 
 Domain:
@@ -133,6 +134,18 @@ Covers:
 - PowerShell event queries
 - controlled service stop and recovery
 
+
+### 9. Remote Administration
+
+[Windows Server Remote Administration](remote-administration.md)
+
+Covers:
+
+- Windows Remote Management (WinRM)
+- TCP port 5985 connectivity testing
+- PowerShell Remoting
+- remote service monitoring
+- authentication and authorization troubleshooting
 
 ## Current Architecture
 
