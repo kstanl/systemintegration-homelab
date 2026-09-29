@@ -22,3 +22,12 @@ The troubleshooting process verified network connectivity, DNS, service ports, W
 See:
 
 [ RDP Connectivity Troubleshooting](rdp-connectivity-troubleshooting.md)
+
+
+### Routing Troubleshooting
+
+Investigated Linux routing by intentionally removing the default route, diagnosing loss of external connectivity, and restoring the route.
+
+See:
+
+[Routing Troubleshooting](routing-troubleshooting.md)
