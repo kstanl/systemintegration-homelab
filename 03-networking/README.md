@@ -43,3 +43,15 @@ The exercise demonstrated how to distinguish DNS problems from general network c
 See:
 
 [DNS Troubleshooting](dns-troubleshooting.md)
+
+
+
+### TCP/UDP Ports and Service Connectivity
+
+Investigated TCP service connectivity using SSH, `ss`, Netcat, systemd services, and socket activation.
+
+The exercise included intentionally disabling TCP port 22, diagnosing the failure, and restoring the service.
+
+See:
+
+[TCP/UDP Ports and Service Connectivity](service-connectivity-troubleshooting.md)
