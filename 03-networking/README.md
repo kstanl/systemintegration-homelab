@@ -31,3 +31,15 @@ Investigated Linux routing by intentionally removing the default route, diagnosi
 See:
 
 [Routing Troubleshooting](routing-troubleshooting.md)
+
+
+
+### DNS Troubleshooting
+
+Investigated a DNS failure by intentionally configuring an incorrect DNS server while maintaining normal IP connectivity.
+
+The exercise demonstrated how to distinguish DNS problems from general network connectivity problems.
+
+See:
+
+[DNS Troubleshooting](dns-troubleshooting.md)
