@@ -65,3 +65,15 @@ Tested Linux neighbor discovery, IP-to-MAC resolution, neighbor states, and fail
 See:
 
 [ARP and Layer 2 Troubleshooting](arp-layer2-troubleshooting.md)
+
+
+### DHCP Troubleshooting
+
+Simulated loss of a Linux client's DHCP configuration and restored the network through the VM console.
+
+See:
+
+[DHCP Client Troubleshooting](dhcp-troubleshooting.md)
+
+
+
