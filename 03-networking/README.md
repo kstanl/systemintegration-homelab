@@ -76,4 +76,15 @@ See:
 [DHCP Client Troubleshooting](dhcp-troubleshooting.md)
 
 
+### Subnetting and Network Segmentation
+
+Divided a `/24` network into four `/26` networks for a fictional company with separate IT, Sales, HR, and Server networks.
+
+See:
+
+[Subnetting and Network Segmentation](subnetting-and-segmentation.md)
+
+
+
+
 
