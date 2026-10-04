@@ -55,3 +55,13 @@ The exercise included intentionally disabling TCP port 22, diagnosing the failur
 See:
 
 [TCP/UDP Ports and Service Connectivity](service-connectivity-troubleshooting.md)
+
+
+
+### ARP and Layer 2 Troubleshooting
+
+Tested Linux neighbor discovery, IP-to-MAC resolution, neighbor states, and failed local network resolution.
+
+See:
+
+[ARP and Layer 2 Troubleshooting](arp-layer2-troubleshooting.md)
