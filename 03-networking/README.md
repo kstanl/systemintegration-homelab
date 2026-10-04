@@ -85,6 +85,13 @@ See:
 [Subnetting and Network Segmentation](subnetting-and-segmentation.md)
 
 
+### Packet Tracer Multi-Network Lab
+
+Built two IPv4 LANs with DHCP addressing and routed traffic between the networks using a Cisco router.
+
+See:
+
+[Packet Tracer Multi-Network Lab](packet-tracer-multi-network-lab.md)
 
 
 
